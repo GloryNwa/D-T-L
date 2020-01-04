@@ -1,0 +1,38 @@
+ <form class="form-wrp" method="POST" action="{{route('uploadPost')}}" enctype="multipart/form-data" >
+         
+                              <div class="form-group">
+                              <input type="hidden" name="MAX_FILE_SIZE" value="1000000"> <br>
+                          
+                                <div class="form-group">
+                              
+                                <label class="sr-only" for="post_title">Title</label>
+                                <input class="form-control" type="text" id="le_name" name="title" placeholder="Title*" required="required" data-validation-required-message="Please describe it."/>
+                                <p class="help-block text-danger"></p>
+                              </div>
+                                <div class="form-group">
+                                <label class="sr-only" for="name">Author</label>
+                                <input class="form-control" type="text" id="author" name="author" placeholder="Author*" required="required" data-validation-required-message="Please enter your name."/>
+                                <p class="help-block text-danger"></p>
+                              </div>
+                              <div class="form-group">
+                               Select Category:
+                                <label class="sr-only" for="">Video, Audio, Book</label>
+                                <select name="post">
+                                <option value="tech">Video</option>
+                                <option value="style">Audio</option>
+                                <option value="food">Book</option>
+                                <input class="form-control" type="text" id="" name="material" placeholder="Choose your subject*" required="required" data-validation-required-message="Pleas choose your Subject."/>
+                                <p class="help-block text-danger"></p>
+                              </div> 
+                              {{-- <div class="form-group">
+                                <textarea class="form-control" rows="7" id="message" name="posts" placeholder="Your Message*" required="required" data-validation-required-message="Please enter your message."></textarea> --}}
+                                 <div class="form-group">
+                                  <input type="file" name="file_upload" id="file_Upload" required="required" data-validation-required-message="Please choose a picture.">
+                              
+                                </div>
+                                {{-- <p class="help-block text-danger"></p>
+                              </div> --}}
+                              <div class="text-center">
+                                <button class="btn btn-block btn-round btn-d" id="cfsubmit" type="submit" value="Upload Image" name="submit">Submit</button>
+                              </div>
+                            </form>
